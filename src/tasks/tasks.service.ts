@@ -10,6 +10,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 @Injectable()
 export class TasksService {
     constructor(
+        @InjectRepository(TaskRepository)
         private readonly taskRepository: TaskRepository
     ) {}
 
